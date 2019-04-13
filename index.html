@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Yakker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <!--Reset CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <!-- Jumbotron-->
+        <div class="jumbotron">
+            <h1 class="text-center">Bringing together advertisers and producers with stars...</h1>
+        </div>
+        <!-- Sign-up Form (note the various input "types")-->
+        <form role="form" id="createuser-form">
+            <!-- Create username-->
+            <div class="form-group row">
+                <label for="username-input">Username:</label>
+                <input class="form-control" id="username-input" type="text">
+            </div>
+            <!-- Create password-->
+            <div class="form-group row">
+                <label for="password-input">Password:</label>
+                <input class="form-control" id="password-input" type="text">
+            </div>
+            <!-- Confirm password-->
+            <div class="form-group row">
+                <label for="confirmpwd-input">Confirm Password:</label>
+                <input class="form-control" id="confirmpwd-input" type="text">
+            </div>
+            <div class="form-group row">
+                <label for="email-input">Email:</label>
+                <textarea class="form-control" id="email-input" type="email"></textarea>
+            </div>
+            <button class="btn btn-default" id="create-user" type="submit">Submit</button>
+        </form>
+
+        <!-- Login Form (note the various input "types")-->
+        <form role="form" id="login-form">
+            <!-- username-->
+            <div class="form-group row">
+                <label for="username-reg">Username:</label>
+                <input class="form-control" id="username-reg" type="text">
+            </div>
+            <!-- password-->
+            <div class="form-group row">
+                <label for="password-reg">Password:</label>
+                <input class="form-control" id="password-reg" type="text">
+            </div>
+            <button class="btn btn-default" id="login-user" type="submit">Login</button>
+        </form>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
