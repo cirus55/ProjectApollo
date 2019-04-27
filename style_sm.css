@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+}
+
+.mujeres_nav{
+    color: aliceblue;
+margin-top: 40px;
+margin-left: 300px;
+font-size: 25px;
+font-family: "raleway"; 
+
+
+}
+
+.hombres_nav {
+ color: aliceblue;
+ margin-left: 450px;
+ margin-top: -56px;
+font-size: 25px;
+font-family: "raleway"; 
+
+}
+
+.influencers_nav{
+color: aliceblue;
+margin-left: 600px;
+margin-top: -56px;
+font-size: 25px;
+font-family: "raleway"; 
+
+
+
+}
+
+.join_nav{
+color: aliceblue;
+margin-left: 765px;
+margin-top: -56px;
+font-size: 25px;
+font-family: "raleway"; 
+
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: -70;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#login {
+    color: aliceblue;
+}
