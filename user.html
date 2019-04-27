@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S&M2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="user.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body bgcolor="white">
+    <div class="container">
+        <!--Log Out-->
+        <div id="logout-user">Logout</div>
+        <!--Upload File-->
+        <div>
+            <h2>Upload Image</h2>
+            <label class="upload-group">
+                Upload File
+                <input type="file" class="upload-group" id="file">
+            </label>
+            <button id="upload-button">Upload Image</button>
+        </div>
+        <!--Image Container-->
+        <div class="image-container">
+
+        </div>
+        <!--Chat Container-->
+        <div class="chat-wrapper">
+            <div class="chat-container">
+
+            </div>
+            <div class="msg-container">
+
+            </div>
+            <input id="message" class="form-control" type="text">
+            <button id="send-msg">Send Message</button>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>
