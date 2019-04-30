@@ -104,3 +104,8 @@ function logout() {
 
 //----------------------------------------------
 
+$(document).on("click", "#indexnav", gotoModels);
+
+function gotoModels(){
+    window.location.assign("models.html");
+}

@@ -14,26 +14,32 @@
 
 <body bgcolor="white">
     <div class="container">
-        <!--Log Out-->
-        <div id="logout-user">Logout</div>
-        <!--Upload File-->
         <div>
-            <h2>Upload Image</h2>
-            <label class="upload-group">
-                Upload File
-                <input type="file" class="upload-group" id="file">
-            </label>
-            <button id="upload-button">Upload Image</button>
+            
+            <input type='text' id='gender' list='genderList' />
+            <datalist id='genderList'>
+                <option value='Male'>Male</option>
+                <option value='Female'>Female</option>
+            </datalist>
+            
+            <input id="age" class="form-control" type="text" placeholder="age">
+            
+            <input id="beauty" class="form-control" type="text" placeholder="beauty">
+            
+            <input type='text' id='ethnicity' list='ethnicityList' />
+            <datalist id='ethnicityList'>
+                <option value='White'>White</option>
+                <option value='Black'>Black</option>
+                <option value='Asian'>Asian</option>
+            </datalist>
+            
+            <button id="filter">Filter</button>
         </div>
+
         <!--Image Container-->
-        <!-- <div class="image-container">
-
-        </div> -->
-
         <div class="grid-container">
 
         </div>
-
         <!--Chat Container-->
         <div class="chat-wrapper">
             <div class="chat-container">
@@ -51,7 +57,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- LINK TO FIREBASE GOES HERE -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script src="user.js"></script>
+    <script src="models.js"></script>
 </body>
 
 </html>

@@ -12,6 +12,12 @@ font-family: "raleway";
 
 }
 
+a{
+    color: aliceblue;
+    font-size: 25px;
+    font-family: "raleway"; 
+}
+
 .hombres_nav {
  color: aliceblue;
  margin-left: 450px;

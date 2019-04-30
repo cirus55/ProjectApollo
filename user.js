@@ -166,7 +166,8 @@ database.ref("userImages/" + id).on("child_added", function (snapshot) {
 
     newDiv = $("<div>");
     newDiv.addClass("card");
-    newDiv.attr("style", "width: 18rem;")
+    newDiv.attr("id","grid-item");
+    newDiv.attr("style", "width: 18rem;");
     newImg = $("<img>");
     newImg.attr("src", sv.downloadURL);
     newImg.addClass("card-img-top")
@@ -199,41 +200,12 @@ database.ref("userImages/" + id).on("child_added", function (snapshot) {
     newa.text("Book Model");
     newDiv2.append(newa);
 
-    $(".image-container").append(newDiv);
+    $(".grid-container").append(newDiv);
 
     // Handle the errors
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
-
-//----------------------------------------------------------
-
-// var id = localStorage.getItem("uid");
-
-// //function to load user stats
-// database.ref("userData/" + id).on("child_added", function (snapshot) {
-
-//     var sv = snapshot.val();
-
-//     newDiv = $("<div>");
-//     newP = $("<p>");
-//     newP.text(`El algoritmo de Inteligencia Artificteristicas
-//     ha generado las siguientes caracteristicas en base a sus fotos:
-//     Genero: ${sv.gender}
-//     Edad: ${sv.age}
-//     Belleza Femenina: ${sv.femaleBeauty}
-//     Belleza Masculina: ${sv.maleBeauty}
-//     Etnicidad: ${sv.ethnicity}
-//     Salud de Piel: ${sv.skinStatusHealth}
-//     Acne de Piel: ${sv.skinStatusAcne}
-//     `)
-//     newDiv.append(newP);
-//     $(".data-container").append(newDiv);
-
-//     // Handle the errors
-// }, function (errorObject) {
-//     console.log("Errors handled: " + errorObject.code);
-// });
 
 
 //-----------------------------------------------------------
