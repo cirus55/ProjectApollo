@@ -13,35 +13,40 @@
 </head>
 
 <body bgcolor="white">
+
+    <!--Log Out-->
+    <div id="home">Home</div>
+
+    <div>
+
+        <input type='text' id='gender' list='genderList' />
+        <datalist id='genderList'>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+        </datalist>
+
+        <input id="age" class="form-control" type="text" placeholder="age">
+
+        <input id="beauty" class="form-control" type="text" placeholder="beauty">
+
+        <input type='text' id='ethnicity' list='ethnicityList' />
+        <datalist id='ethnicityList'>
+            <option value='White'>White</option>
+            <option value='Black'>Black</option>
+            <option value='Asian'>Asian</option>
+        </datalist>
+
+        <button id="filter">Filter</button>
+    </div>
+
     <div class="container">
-        <div>
-            
-            <input type='text' id='gender' list='genderList' />
-            <datalist id='genderList'>
-                <option value='Male'>Male</option>
-                <option value='Female'>Female</option>
-            </datalist>
-            
-            <input id="age" class="form-control" type="text" placeholder="age">
-            
-            <input id="beauty" class="form-control" type="text" placeholder="beauty">
-            
-            <input type='text' id='ethnicity' list='ethnicityList' />
-            <datalist id='ethnicityList'>
-                <option value='White'>White</option>
-                <option value='Black'>Black</option>
-                <option value='Asian'>Asian</option>
-            </datalist>
-            
-            <button id="filter">Filter</button>
-        </div>
 
         <!--Image Container-->
         <div class="grid-container">
 
         </div>
         <!--Chat Container-->
-        <div class="chat-wrapper">
+        <!-- <div class="chat-wrapper">
             <div class="chat-container">
 
             </div>
@@ -50,7 +55,7 @@
             </div>
             <input id="message" class="form-control" type="text">
             <button id="send-msg">Send Message</button>
-        </div>
+        </div> -->
     </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

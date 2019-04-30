@@ -78,77 +78,55 @@ $(document).on("click", "#filter", filterModels);
 function filterModels() {
     database.ref("userImages/").on("value", function (snapshot) {
 
-        $("#grid-container").empty();
+        $(".grid-container").empty();
         newGridContainer = $("<div>");
-        newGridContainer.addClass("grid-container");
-        $(".container").append(newGridContainer);
+        newGridContainer.addClass("filtered-grid-container");
+        $(".container").prepend(newGridContainer);
 
         var sv = snapshot.val();
-        //console.log(sv);
-
         const keys = Object.keys(sv);
-        //console.log(keys);
 
         genderFilter = $("#gender").val().trim();
         ageFilter = $("#age").val().trim();
         beautyFilter = $("#beauty").val().trim();
         ethnicityFilter = $("#ethnicity").val().trim();
 
-        filterString = "";
-
-
-
 
         for (var i = 0; i < keys.length; i++) {
 
-            //console.log(sv[keys[i]]);
-
             var userphotos = sv[keys[i]];
-
             const subkeys = Object.keys(userphotos);
-
-            //console.log(subkeys);
-
-            var condArray = [];
 
             for (var x = 0; x < subkeys.length; x++) {
 
+                var condArray = [];
+
                 if (genderFilter !== "") {
-                    filterString = "userphotos[subkeys[x]].gender ==  genderFilter";
                     condArray.push("userphotos[subkeys[x]].gender ==  genderFilter");
                 }
 
                 if (ageFilter !== "") {
-                    filterString = filterString + " & userphotos[subkeys[x]].genderFilter ==" + ageFilter;
                     condArray.push("userphotos[subkeys[x]].age ==  ageFilter");
                 }
 
                 if (beautyFilter !== "") {
-                    filterString = filterString + " & userphotos[subkeys[x]].beautyFilter ==" + beautyFilter;
                     condArray.push("userphotos[subkeys[x]].femalebeauty ==  beautyFilter");
                 }
 
                 if (ethnicityFilter !== "") {
-                    filterString = filterString + " & userphotos[subkeys[x]].ethnicityFilter ==" + ethnicityFilter;
                     condArray.push("userphotos[subkeys[x]].ethnicity ==  ethnicityFilter");
                 }
 
-                console.log(userphotos[subkeys[x]].gender, genderFilter);
-                console.log(eval(filterString));
-                //console.log(userphotos[subkeys[x]].gender);
-                //console.log(subkeys);
+                if (eval(condArray.join(" & "))) {
 
-                console.log(condArray.join(" & "));
+                    console.log("blah");
 
-                if (eval(filterString)) {
-                //if (eval(condArray)) {
-                    console.log(userphotos[subkeys[i]].gender);
                     newDiv = $("<div>");
                     newDiv.addClass("card");
                     newDiv.attr("id", "grid-item");
                     newDiv.attr("style", "width: 18rem;");
                     newImg = $("<img>");
-                    newImg.attr("src", userphotos[subkeys[i]].downloadURL);
+                    newImg.attr("src", userphotos[subkeys[x]].downloadURL);
                     newImg.addClass("card-img-top")
                     newImg.attr("alt", "Failed to Load Image")
                     newDiv.append(newImg);
@@ -164,13 +142,13 @@ function filterModels() {
                     newP = $("<p>");
                     newP.text(`The Artificial Intelligence Algorithm 
                         has generated the following characteristics for your photo:
-                        Gender: ${userphotos[subkeys[i]].gender}
-                        Age: ${userphotos[subkeys[i]].age}
-                        Female Beauty: ${userphotos[subkeys[i]].femaleBeauty}
-                        Male Beauty: ${userphotos[subkeys[i]].maleBeauty}
-                        Ethnicity: ${userphotos[subkeys[i]].ethnicity}
-                        Skin Health: ${userphotos[subkeys[i]].skinStatusHealth}
-                        Skin Acne: ${userphotos[subkeys[i]].skinStatusAcne}
+                        Gender: ${userphotos[subkeys[x]].gender}
+                        Age: ${userphotos[subkeys[x]].age}
+                        Female Beauty: ${userphotos[subkeys[x]].femaleBeauty}
+                        Male Beauty: ${userphotos[subkeys[x]].maleBeauty}
+                        Ethnicity: ${userphotos[subkeys[x]].ethnicity}
+                        Skin Health: ${userphotos[subkeys[x]].skinStatusHealth}
+                        Skin Acne: ${userphotos[subkeys[x]].skinStatusAcne}
                      `)
                     newDiv2.append(newP);
                     newa = $("<a>");
@@ -178,8 +156,7 @@ function filterModels() {
                     newa.addClass("btn btn-primary");
                     newa.text("Book Model");
                     newDiv2.append(newa);
-
-                    $(".grid-container").append(newDiv);
+                    $(".filtered-grid-container").append(newDiv);
                 }
 
             }
@@ -192,46 +169,53 @@ function filterModels() {
 
 //----------------------------------------------------------
 
-var counter = 0;
+// var counter = 0;
 
-//function to send message in chat
+// //function to send message in chat
 
-$(document).on("click", "#send-msg", sendMessage);
+// $(document).on("click", "#send-msg", sendMessage);
 
-function sendMessage() {
+// function sendMessage() {
 
-    var message = $("#message").val();
-    var dateOfMsg = moment();
-    var messageOrder = counter;
-    $("#message").val("");
+//     var message = $("#message").val();
+//     var dateOfMsg = moment();
+//     var messageOrder = counter;
+//     $("#message").val("");
 
-    database.ref("userChat/generic").push({
-        message: message
-        //counter: counter
-        //dateAdded: dateOfMsg
-    });
-};
+//     database.ref("userChat/generic").push({
+//         message: message
+//         //counter: counter
+//         //dateAdded: dateOfMsg
+//     });
+// };
 
-//function to load messages in chat
-database.ref("userChat/generic/").on("child_added", function (snapshot) {
+// //function to load messages in chat
+// database.ref("userChat/generic/").on("child_added", function (snapshot) {
 
-    //counter = sv.counter;
-    var sv = snapshot.val();
-    var newDiv = $("<div>");
-    var newImg = $("<img>");
-    var newP = $("<p>");
-    newP.text(sv.message);
-    var newSpan = $("<span>");
-    newSpan.text(sv.dateAdded);
-    newDiv.append(newImg);
-    newDiv.append(newP);
-    newDiv.append(newSpan);
-    $(".chat-container").append(newDiv);
-    //console.log(counter);
+//     //counter = sv.counter;
+//     var sv = snapshot.val();
+//     var newDiv = $("<div>");
+//     var newImg = $("<img>");
+//     var newP = $("<p>");
+//     newP.text(sv.message);
+//     var newSpan = $("<span>");
+//     newSpan.text(sv.dateAdded);
+//     newDiv.append(newImg);
+//     newDiv.append(newP);
+//     newDiv.append(newSpan);
+//     $(".chat-container").append(newDiv);
+//     //console.log(counter);
+
+//     // Handle the errors
+// }, function (errorObject) {
+//     console.log("Errors handled: " + errorObject.code);
+// });
 
 
+//-------------------------------------------------------------
 
-    // Handle the errors
-}, function (errorObject) {
-    console.log("Errors handled: " + errorObject.code);
-});
+$(document).on("click", "#home", gotoHome);
+
+function gotoHome(){
+    window.location.assign("index.html");
+}
