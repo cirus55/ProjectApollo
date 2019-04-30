@@ -106,16 +106,18 @@ function filterModels() {
                 }
 
                 if (ageFilter !== "") {
-                    condArray.push("userphotos[subkeys[x]].age ==  ageFilter");
+                    condArray.push("userphotos[subkeys[x]].age <  ageFilter");
                 }
 
                 if (beautyFilter !== "") {
-                    condArray.push("userphotos[subkeys[x]].femalebeauty ==  beautyFilter");
+                    condArray.push("userphotos[subkeys[x]].femaleBeauty >  beautyFilter");
                 }
 
                 if (ethnicityFilter !== "") {
                     condArray.push("userphotos[subkeys[x]].ethnicity ==  ethnicityFilter");
                 }
+
+                console.log(condArray.join(" & "));
 
                 if (eval(condArray.join(" & "))) {
 
