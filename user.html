@@ -12,38 +12,30 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
-<body bgcolor="white">
+<body>
+    <img src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fsm_logo_home.png?alt=media&token=dbb04890-057f-4336-a976-6dae82c6f083"
+        alt="S&M2" class="logo">
     <div class="container">
-        <!--Log Out-->
-        <div id="logout-user">Logout</div>
-        <!--Upload File-->
-        <div>
-            <h2>Upload Image</h2>
-            <label class="upload-group">
-                Upload File
-                <input type="file" class="upload-group" id="file">
-            </label>
-            <button id="upload-button">Upload Image</button>
-        </div>
-        <!--Image Container-->
-        <!-- <div class="image-container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <!-- <input type="file" id="file"> -->
+                <!-- <label class="upload-group"> -->
+                <!-- <input type="file" class="upload-group" id="file"> -->
+                <!-- </label> -->
+                <input id="file" type="file" placeholder="Image..." />
 
-        </div> -->
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-light" id="upload-button">Upload</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-light" id="logout-user">Logout</button>
+            </li>
+        </ul>
+
 
         <div class="grid-container">
-
-        </div>
-
-        <!--Chat Container-->
-        <div class="chat-wrapper">
-            <div class="chat-container">
-
-            </div>
-            <div class="msg-container">
-
-            </div>
-            <input id="message" class="form-control" type="text">
-            <button id="send-msg">Send Message</button>
+            <!--Aqui van las fotos-->
         </div>
     </div>
     <!-- jQuery -->

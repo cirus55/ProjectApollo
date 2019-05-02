@@ -1,0 +1,58 @@
+body{
+    background-color: #070606;
+}
+
+img{
+    width:350px;
+    height:250px; 
+    position: fixed;
+    left: 33%;
+    top: 20%;
+}
+
+.modelsNav{
+    position: fixed;
+    left: 43%;
+    top: 65%;
+    color: aliceblue;
+    font-size: 25px;
+    font-family: "raleway"; 
+}
+
+.containerSM {
+    position: fixed;
+    top: 75%;
+    left: 28%;
+    text-align: center;
+}
+
+.header-div{
+    padding: 5px;
+    font-family: "raleway"; 
+}
+
+input{
+    font-family: "raleway";
+    /* height:38px; */
+    border-radius: 5px;
+}
+
+#create-user{
+    font-family: "raleway"; 
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: -70;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#login, #register{
+    color: aliceblue;
+}
+

@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body bgcolor="#070606">
+<body>
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>S&M2</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="style_sm.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="index.css">
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     </head>
 
     <body>
-        
 
-        <img src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fsm_logo_home.png?alt=media&token=dbb04890-057f-4336-a976-6dae82c6f083" alt="S&M2" style="width:350px;height:250px; margin-top: 20%; margin-left: 35%">
 
-        <div class="mujeres_nav" id="indexnav">
-            <p>Mujeres</p>
+        <img src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fsm_logo_home.png?alt=media&token=dbb04890-057f-4336-a976-6dae82c6f083"
+            alt="S&M2">
+
+        <div class="modelsNav">
+            <p>Models</p>
         </div>
 
-        <div class="hombres_nav" id="indexnav">
-            <p>Hombres</p>
+        <div class="containerSM">
+            <!--Sign In-->
+            <div class="main-div" id="login-div">
+                <div class="header-div" id="login">
+                    Login / Register
+                </div>
+                <input id="email-reg" type="email" placeholder="Email..." />
+                <input id="password-reg" type="password" placeholder="Password..." />
+
+                <button type="button" class="btn btn-outline-light" id="login-user">Login to Account</button>
+            </div>
+            <!--Register-->
+            <div class="main-div" id="register-div">
+                <div class="header-div" id="register">
+                    Login / Register
+                </div>
+                <input id="email-input" type="email" placeholder="Email..." />
+                <input id="password-input" type="password" placeholder="Password..." />
+
+                <button type="button" class="btn btn-outline-light" id="create-user">Register Account</button>
+            </div>
         </div>
 
-        <div class="influencers_nav" id="indexnav">
-            <p>Influencers</p>
-        </div>
-
-        <div class="join_nav" id="indexjoin">
-            <p>Join Us</p>
-        </div>
 
         <video autoplay muted loop id="myVideo">
-            <source src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fvid_home1.mp4?alt=media&token=aa7d6d8c-895a-4190-b7bb-da870da2a34c" type="video/mp4">
+            <source
+                src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fvid_home1.mp4?alt=media&token=aa7d6d8c-895a-4190-b7bb-da870da2a34c"
+                type="video/mp4">
         </video>
-
-        <div class="container">
-                <!--Sign In-->
-                <div class="main-div" id="login-div">
-                    <div class="header-div" id="login">
-                        Login / Register
-                    </div>
-                    <input id="email-reg" type="email" placeholder="Email..." />
-                    <input id="password-reg" type="password" placeholder="Password..." />
-    
-                    <button id="login-user">Login to Account</button>
-                </div>
-                <!--Register-->
-                <div class="main-div" id="register-div">
-                    <div class="header-div" id="register">
-                        Login / Register
-                    </div>
-                    <input id="email-input" type="email" placeholder="Email..." />
-                    <input id="password-input" type="password" placeholder="Password..." />
-    
-                    <button id="create-user">Register Account</button>
-                </div>
-            </div>
-
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>

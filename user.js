@@ -182,21 +182,62 @@ database.ref("userImages/" + id).on("child_added", function (snapshot) {
     newh5.addClass("card-title");
     newh5.text("Model");
     newDiv2.append(newh5);
+    // newP = $("<p>");
+    // newP.text(`The Artificial Intelligence Algorithm 
+    //     has generated the following characteristics for your photo:
+    //     Gender: ${sv.gender}
+    //     Age: ${sv.age}
+    //     Female Beauty: ${sv.femaleBeauty}
+    //     Male Beauty: ${sv.maleBeauty}
+    //     Ethnicity: ${sv.ethnicity}
+    //     Skin Health: ${sv.skinStatusHealth}
+    //     Skin Acne: ${sv.skinStatusAcne}
+    //  `)
+    // newDiv2.append(newP);
+
     newP = $("<p>");
     newP.text(`The Artificial Intelligence Algorithm 
         has generated the following characteristics for your photo:
-        Gender: ${sv.gender}
-        Age: ${sv.age}
-        Female Beauty: ${sv.femaleBeauty}
-        Male Beauty: ${sv.maleBeauty}
-        Ethnicity: ${sv.ethnicity}
-        Skin Health: ${sv.skinStatusHealth}
-        Skin Acne: ${sv.skinStatusAcne}
      `)
     newDiv2.append(newP);
+
+    newUL = $("<ul>");
+    newLI1 = $("<li>");
+    newLI1.text("Gender: " + sv.gender);
+    newUL.append(newLI1);
+
+    newLI2 = $("<li>");
+    newLI2.text("Age: " + sv.age);
+    newUL.append(newLI2);
+
+    newLI3 = $("<li>");
+    newLI3.text("Female Beauty: " + sv.femaleBeauty);
+    newUL.append(newLI3);
+
+    newLI4 = $("<li>");
+    newLI4.text("Male Beauty: " + sv.maleBeauty);
+    newUL.append(newLI4);
+
+    newLI5 = $("<li>");
+    newLI5.text("Ethnicity: " + sv.ethnicity);
+    newUL.append(newLI5);
+
+    newLI6 = $("<li>");
+    newLI6.text("Skin Status Health: " + sv.skinStatusHealth);
+    newUL.append(newLI6);
+
+    newLI7 = $("<li>");
+    newLI7.text("Skin Status Acne: " + sv.skinStatusAcne);
+    newUL.append(newLI7);
+
+    newDiv2.append(newUL);
+
+
+
+
     newa = $("<a>");
     newa.attr("href", "#");
-    newa.addClass("btn btn-primary");
+    newa.addClass("btn btn-outline-light");
     newa.text("Book Model");
     newDiv2.append(newa);
 

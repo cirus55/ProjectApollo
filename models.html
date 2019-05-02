@@ -8,37 +8,41 @@
     <title>S&M2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="models.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
-<body bgcolor="white">
+<body>
+        <img id="home" src="https://firebasestorage.googleapis.com/v0/b/apollo-12861.appspot.com/o/S%26M%2Fsm_logo_home.png?alt=media&token=dbb04890-057f-4336-a976-6dae82c6f083"
+        alt="S&M2" class="logo">
 
-    <!--Log Out-->
-    <div id="home">Home</div>
-
-    <div>
-
-        <input type='text' id='gender' list='genderList' />
-        <datalist id='genderList'>
-            <option value='Male'>Male</option>
-            <option value='Female'>Female</option>
-        </datalist>
-
-        <input id="age" class="form-control" type="text" placeholder="age">
-
-        <input id="beauty" class="form-control" type="text" placeholder="beauty">
-
-        <input type='text' id='ethnicity' list='ethnicityList' />
-        <datalist id='ethnicityList'>
-            <option value='White'>White</option>
-            <option value='Black'>Black</option>
-            <option value='Asian'>Asian</option>
-            <option value='Indian'>Indian</option>
-        </datalist>
-
-        <button id="filter">Filter</button>
-    </div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <input type='text' id='gender' list='genderList' placeholder="  gender" />
+            <datalist id='genderList'>
+                <option value='Male'>Male</option>
+                <option value='Female'>Female</option>
+            </datalist>
+        </li>
+        <li class="nav-item">
+            <input id="age" class="form-control" type="text" placeholder="age">
+        </li>
+        <li class="nav-item">
+            <input id="beauty" class="form-control" type="text" placeholder="beauty">
+        </li>
+        <li class="nav-item">
+            <input type='text' id='ethnicity' list='ethnicityList' placeholder="  ethnicity"/>
+            <datalist id='ethnicityList'>
+                <option value='White'>White</option>
+                <option value='Black'>Black</option>
+                <option value='Asian'>Asian</option>
+                <option value='Indian'>Indian</option>
+            </datalist>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn btn-outline-light" id="filter">Filter</button>
+        </li>
+    </ul>
 
     <div class="container">
 
@@ -46,17 +50,6 @@
         <div class="grid-container">
 
         </div>
-        <!--Chat Container-->
-        <!-- <div class="chat-wrapper">
-            <div class="chat-container">
-
-            </div>
-            <div class="msg-container">
-
-            </div>
-            <input id="message" class="form-control" type="text">
-            <button id="send-msg">Send Message</button>
-        </div> -->
     </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

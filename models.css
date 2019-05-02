@@ -1,5 +1,4 @@
-
-  body{
+body{
     background-color: #070606;
 }
 
@@ -78,6 +77,12 @@ img{
       color:white;
   }
 
+  input{
+    font-family: "raleway";
+    height:38px;
+    border-radius: 5px;
+}
+
 
 
 .nav-item{
@@ -86,16 +91,6 @@ img{
 
 #filter{
     padding: 3px;
-}
-
-input{
-  font-family: "raleway";
-  border-radius: 5px;
-  background-color: white;
-}
-
-#upload-button, #logout-user{
-  padding: 3px;
 }
 
 p {

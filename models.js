@@ -44,21 +44,59 @@ database.ref("userImages/").on("child_added", function (snapshot) {
         newh5.addClass("card-title");
         newh5.text("Model");
         newDiv2.append(newh5);
+        // newP = $("<p>");
+        // newP.text(`The Artificial Intelligence Algorithm 
+        //     has generated the following characteristics for your photo:
+        //     Gender: ${sv[keys[i]].gender}
+        //     Age: ${sv[keys[i]].age}
+        //     Female Beauty: ${sv[keys[i]].femaleBeauty}
+        //     Male Beauty: ${sv[keys[i]].maleBeauty}
+        //     Ethnicity: ${sv[keys[i]].ethnicity}
+        //     Skin Health: ${sv[keys[i]].skinStatusHealth}
+        //     Skin Acne: ${sv[keys[i]].skinStatusAcne}
+        //  `)
+        // newDiv2.append(newP);
+
         newP = $("<p>");
         newP.text(`The Artificial Intelligence Algorithm 
             has generated the following characteristics for your photo:
-            Gender: ${sv[keys[i]].gender}
-            Age: ${sv[keys[i]].age}
-            Female Beauty: ${sv[keys[i]].femaleBeauty}
-            Male Beauty: ${sv[keys[i]].maleBeauty}
-            Ethnicity: ${sv[keys[i]].ethnicity}
-            Skin Health: ${sv[keys[i]].skinStatusHealth}
-            Skin Acne: ${sv[keys[i]].skinStatusAcne}
          `)
         newDiv2.append(newP);
+
+        newUL = $("<ul>");
+        newLI1 = $("<li>");
+        newLI1.text("Gender: " + sv[keys[i]].gender);
+        newUL.append(newLI1);
+
+        newLI2 = $("<li>");
+        newLI2.text("Age: " + sv[keys[i]].age);
+        newUL.append(newLI2);
+
+        newLI3 = $("<li>");
+        newLI3.text("Female Beauty: " + sv[keys[i]].femaleBeauty);
+        newUL.append(newLI3);
+
+        newLI4 = $("<li>");
+        newLI4.text("Male Beauty: " + sv[keys[i]].maleBeauty);
+        newUL.append(newLI4);
+
+        newLI5 = $("<li>");
+        newLI5.text("Ethnicity: " + sv[keys[i]].ethnicity);
+        newUL.append(newLI5);
+
+        newLI6 = $("<li>");
+        newLI6.text("Skin Status Health: " + sv[keys[i]].skinStatusHealth);
+        newUL.append(newLI6);
+
+        newLI7 = $("<li>");
+        newLI7.text("Skin Status Acne: " + sv[keys[i]].skinStatusAcne);
+        newUL.append(newLI7);
+
+        newDiv2.append(newUL);
+
         newa = $("<a>");
         newa.attr("href", "#");
-        newa.addClass("btn btn-primary");
+        newa.addClass("btn btn-outline-light");
         newa.text("Book Model");
         newDiv2.append(newa);
 
@@ -155,7 +193,7 @@ function filterModels() {
                     newDiv2.append(newP);
                     newa = $("<a>");
                     newa.attr("href", "#");
-                    newa.addClass("btn btn-primary");
+                    newa.addClass("btn btn-outline-light");
                     newa.text("Book Model");
                     newDiv2.append(newa);
                     $(".filtered-grid-container").append(newDiv);
@@ -218,6 +256,6 @@ function filterModels() {
 
 $(document).on("click", "#home", gotoHome);
 
-function gotoHome(){
+function gotoHome() {
     window.location.assign("index.html");
 }
