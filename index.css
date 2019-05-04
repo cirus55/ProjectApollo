@@ -3,8 +3,6 @@ body{
 }
 
 img{
-    /* width:350px;
-    height:250px;  */
     width: 30%;
     height: 30%; 
     position: fixed;
@@ -17,7 +15,7 @@ img{
     left: 43%;
     top: 65%;
     color: aliceblue;
-    font-size: 25px;
+    font-size: 2rem;
     font-family: "raleway"; 
 }
 
@@ -57,4 +55,187 @@ input{
 #login, #register{
     color: aliceblue;
 }
+
+
+/* Ipad Pro */
+@media only screen and (max-width: 1024px) {
+    img{
+        width: 30%;
+        height: 20%; 
+        position: fixed;
+        left: 40%;
+        top: 35%;
+    }
+
+    .modelsNav{
+        position: fixed;
+        left: 48%;
+        top: 74%;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: "raleway"; 
+    }
+
+    .containerSM {
+        position: fixed;
+        top: 80%;
+        left: 28%;
+        text-align: center;
+    }
+
+    #create-user{
+        margin-top: 1rem;
+    }
+
+    #login-user{
+        margin-top: 1rem;
+    }
+  }
+
+
+  /* Ipad */
+@media only screen and (max-width: 768px) {
+    img{
+        width: 30%;
+        height: 20%; 
+        position: fixed;
+        left: 40%;
+        top: 35%;
+    }
+
+    .modelsNav{
+        position: fixed;
+        left: 46%;
+        top: 74%;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: "raleway"; 
+    }
+
+    .containerSM {
+        position: fixed;
+        top: 80%;
+        left: 21%;
+        text-align: center;
+    }
+
+    #create-user{
+        margin-top: 1rem;
+    }
+
+    #login-user{
+        margin-top: 1rem;
+    }
+  }
+
+    /* Ipad */
+@media only screen and (max-width: 400px) {
+    img{
+        width: 30%;
+        height: 20%; 
+        position: fixed;
+        left: 40%;
+        top: 35%;
+    }
+
+    .modelsNav{
+        position: fixed;
+        left: 40%;
+        top: 68%;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: "raleway"; 
+    }
+
+    .containerSM {
+        position: fixed;
+        top: 75%;
+        left: 12%;
+        text-align: center;
+    }
+
+    #create-user{
+        margin-top: 1rem;
+    }
+
+    #login-user{
+        margin-top: 1rem;
+    }
+  }
+
+
+/* Ipad */
+@media only screen and (max-width: 414px) {
+    img{
+        width: 30%;
+        height: 20%; 
+        position: fixed;
+        left: 40%;
+        top: 38%;
+    }
+
+    .modelsNav{
+        position: fixed;
+        left: 40%;
+        top: 68%;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: "raleway"; 
+    }
+
+    .containerSM {
+        position: fixed;
+        top: 75%;
+        left: 1%;
+        text-align: center;
+    }
+
+    #create-user{
+        margin-top: 1rem;
+    }
+
+    #login-user{
+        margin-top: 1rem;
+    }
+}
+
+/* Ipad */
+@media only screen and (max-width: 360px) {
+    img{
+        width: 30%;
+        height: 20%; 
+        position: fixed;
+        left: 40%;
+        top: 35%;
+    }
+
+    input {
+        width: 33%;
+    }
+
+    .modelsNav{
+        position: fixed;
+        left: 38%;
+        top: 68%;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: "raleway"; 
+    }
+
+    .containerSM {
+        position: fixed;
+        top: 75%;
+        left: 5%;
+        text-align: center;
+    }
+
+    #create-user{
+        margin-top: 1rem;
+    }
+
+    #login-user{
+        margin-top: 1rem;
+    }
+}
+
 

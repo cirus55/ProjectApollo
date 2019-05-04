@@ -3,7 +3,7 @@ body{
 }
 
 img{
-    width: 200px;
+    width: 10rem;
     height: auto;
 
 }
@@ -104,4 +104,25 @@ ul {
 li {
   text-align: left;
   font-family: "raleway";
+}
+
+/* Ipad */
+@media only screen and (max-width: 768px) {
+
+  #grid-item{
+    width: 14rem !important;
+}
+
+  .nav {
+      display: inline;
+  }
+
+  .form-control {
+    width: 24%;
+  }
+
+  input {
+    width: 24%;
+  }
+
 }
